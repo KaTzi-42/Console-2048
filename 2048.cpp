@@ -401,11 +401,7 @@ Player* SaveScore(char* name, int score, int& size)
 	char cc[100]{ 0 };
 	int i = 0;
 	FILE* scoreboard = NULL;
-	int error = fopen_s(&scoreboard, "scboard.txt", "a+");
-	if (error) {
-		cout << "Error create the file";
-		return nullptr;
-	}
+	fopen_s(&scoreboard, "scboard.txt", "a+");
 	while ((fgets(cc, 100, scoreboard)) != NULL)
 		size++;
 	size /= 2;
@@ -413,13 +409,13 @@ Player* SaveScore(char* name, int score, int& size)
 	strcpy_s(nGamer[i].nick, name);
 	nGamer[i].score = score;
 	if (size > 1) {
-		rewind(scoreboard);
+		fseek(scoreboard, 0, SEEK_SET);
 		while (i++, !feof(scoreboard))
 		{
 			fgets(cc, 100, scoreboard);
 			strcpy_s(nGamer[i].nick, cc);
 			nGamer[i].nick[strlen(nGamer[i].nick) - 1] = 0;
-			fscanf_s(scoreboard, "\n%d", &nGamer[i].score);
+			fscanf_s(scoreboard, "%d", &nGamer[i].score);
 			fgets(cc, 100, scoreboard);
 		}
 	}
