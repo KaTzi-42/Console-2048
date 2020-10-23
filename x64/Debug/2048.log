@@ -1,0 +1,8 @@
+﻿  2048.cpp
+E:\projects\c++\2048\2048.cpp(84,33): warning C4267: 'argument': conversion from 'size_t' to 'short', possible loss of data
+E:\projects\c++\2048\2048.cpp(89,33): warning C4267: 'argument': conversion from 'size_t' to 'short', possible loss of data
+E:\projects\c++\2048\2048.cpp(164,33): warning C4267: 'argument': conversion from 'size_t' to 'short', possible loss of data
+E:\projects\c++\2048\2048.cpp(186,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+E:\projects\c++\2048\2048.cpp(461,27): warning C4267: 'argument': conversion from 'size_t' to 'short', possible loss of data
+E:\projects\c++\2048\2048.cpp(463,32): warning C4267: 'argument': conversion from 'size_t' to 'short', possible loss of data
+  2048.vcxproj -> E:\projects\c++\2048\x64\Debug\2048.exe

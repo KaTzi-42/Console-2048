@@ -1,0 +1,2 @@
+E:\projects\c++\2048\x64\Debug\2048.exe
+E:\projects\c++\2048\x64\Debug\2048.pdb
